@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-1",
+  "id": "07",
+  "title": "node.sh и pod.sh с kubectl top, контейнерными метриками",
+  "status": "implemented",
+  "source_question": 7,
+  "timeout_seconds": 120,
+  "cluster_tested": false
+}

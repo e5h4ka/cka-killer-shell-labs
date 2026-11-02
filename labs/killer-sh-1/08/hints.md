@@ -1,0 +1,1 @@
+Сравни kubelet --version worker и controlplane. Найди целевые пакеты в apt-cache madison. После обновления пакетов создай join token на controlplane и выполни kubeadm join на worker. Cleanup восстановит worker до целевой версии.

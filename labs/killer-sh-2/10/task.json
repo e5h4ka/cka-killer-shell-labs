@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-2",
+  "id": "10",
+  "title": "local-backup SC Retain/WFFC, PVC 50Mi, backup Job project-bern",
+  "status": "implemented",
+  "source_question": 10,
+  "timeout_seconds": 120,
+  "cluster_tested": false
+}

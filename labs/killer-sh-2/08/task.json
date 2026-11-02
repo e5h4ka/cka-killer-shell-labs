@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-2",
+  "id": "08",
+  "title": "Тип запуска kubelet/APIServer/scheduler/controller/etcd и DNS",
+  "status": "implemented",
+  "source_question": 8,
+  "timeout_seconds": 120,
+  "cluster_tested": false
+}
