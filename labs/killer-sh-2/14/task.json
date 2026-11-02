@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "14",
   "title": "Инвентаризация CP/workers, Service CIDR, CNI/path, static suffix",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 14,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

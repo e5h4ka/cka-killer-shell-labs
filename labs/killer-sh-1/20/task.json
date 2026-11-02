@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "20",
   "title": "Новый Service IP из 11.96.0.0/12",
-  "status": "planned",
+  "status": "experimental",
   "source_question": 20,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

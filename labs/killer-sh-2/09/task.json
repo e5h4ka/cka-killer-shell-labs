@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "09",
   "title": "Остановить scheduler, manual-schedule на CP, вернуть scheduler, manual-schedule2 на worker",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 9,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

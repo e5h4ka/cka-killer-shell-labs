@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "02",
   "title": "cert-manager release и course-issuer с selfSigned.crlDistributionPoints",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 2,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

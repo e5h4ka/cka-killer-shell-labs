@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "16",
   "title": "Namespaced API resources, project-* namespace с максимумом Roles",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 16,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

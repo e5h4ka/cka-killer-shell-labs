@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "13",
   "title": "HTTPRoute traffic-director: desktop/mobile и /auto по User-Agent",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 13,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

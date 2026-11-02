@@ -22,8 +22,8 @@ def run(*args, timeout=45, stdin=None):
     return result.stdout
 
 
-def kubectl(*args):
-    return run('kubectl', '--request-timeout=20s', *args)
+def kubectl(*args, stdin=None):
+    return run('kubectl', '--request-timeout=20s', *args, stdin=stdin, timeout=150)
 
 
 def query(kind, namespace=None):

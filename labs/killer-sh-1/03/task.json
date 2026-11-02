@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "03",
   "title": "o3db StatefulSet 2 → 1 в project-h800",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 3,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

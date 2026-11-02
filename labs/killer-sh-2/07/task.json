@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "07",
   "title": "etcd-version и etcd-snapshot.db",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 7,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

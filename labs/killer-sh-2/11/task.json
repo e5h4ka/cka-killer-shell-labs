@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "11",
   "title": "secret-pod busybox, readonly secret1, secret2 env APP_USER/APP_PASS",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 11,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "02",
   "title": "my-static-pod nginx 10m/20Mi + static-pod-service NodePort",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 2,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

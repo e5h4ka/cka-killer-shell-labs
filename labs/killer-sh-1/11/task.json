@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "11",
   "title": "ds-important на всех узлах; labels id/uuid, requests 10m/10Mi",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 11,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

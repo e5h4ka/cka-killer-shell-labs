@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "06",
   "title": "Исправить kubelet на CP, Ready и success nginx",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 6,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

@@ -19,7 +19,7 @@ def short_args(argv):
         if len(parts) == 2 and parts[0] in ('1', '2') and parts[1].isdigit():
             return ['start', 'killer-sh-' + parts[0], parts[1], *argv[1:]]
     argv[0] = {'check': 'validate', 'clean': 'cleanup'}.get(argv[0], argv[0])
-    if argv[0] in ('validate', 'hint', 'cleanup') and (
+    if argv[0] in ('validate', 'hint', 'cleanup', 'checkpoint', 'recover') and (
             len(argv) == 1 or argv[1].startswith('--')):
         data = State().read()
         if not data or data.get('phase') == 'cleaned':
@@ -32,10 +32,11 @@ def main(argv=None):
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['doctor', 'list', 'start', 'validate', 'hint', 'cleanup'])
+    parser.add_argument('action', choices=['doctor', 'list', 'start', 'validate', 'hint', 'cleanup', 'checkpoint', 'recover'])
     parser.add_argument('suite', nargs='?', choices=['killer-sh-1', 'killer-sh-2'])
     parser.add_argument('task', nargs='?')
     parser.add_argument('--level', type=int, choices=[1, 2, 3], default=1)
+    parser.add_argument('--stage')
     try:
         args = parser.parse_args(short_args(sys.argv[1:] if argv is None else argv))
         tasks = catalog()
@@ -58,16 +59,17 @@ def main(argv=None):
             hints = (task['directory'] / 'hints.md').read_text(encoding='utf-8').split('<!-- level -->')
             print(hints[min(args.level, len(hints)) - 1].strip())
             return 0
-        if task['status'] != 'implemented':
+        if task['status'] not in ('implemented', 'experimental', 'unsupported'):
             raise Blocked(f'{key[0]}/{key[1]} implementation pending. See PLAN.md.')
         if key == ('killer-sh-1', '01'):
             from kubeconfig_lab import execute
             return execute(args.action, task)
-        raise Blocked('Lifecycle backend not yet installed.')
+        from engine import execute
+        return execute(args.action, task, stage=args.stage)
     except (Blocked, subprocess.TimeoutExpired, OSError) as exc:
         print('BLOCKED:', exc, file=sys.stderr)
         return 2
-    except (ValueError, KeyError) as exc:
+    except (ValueError, KeyError, IndexError, TypeError) as exc:
         print('ERROR:', exc, file=sys.stderr)
         return 3
 

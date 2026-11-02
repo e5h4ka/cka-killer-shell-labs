@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "05",
   "title": "find_pods.sh/find_pods_uid.sh: все namespaces, сортировка timestamp/UID",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 5,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

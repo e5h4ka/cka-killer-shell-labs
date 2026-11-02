@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "17",
   "title": "Kustomize operator: разрешить list students/classes, добавить student4",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 17,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

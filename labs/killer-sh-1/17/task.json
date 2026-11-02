@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "17",
   "title": "tigers-reunite: container ID/runtimeType и logs",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 17,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

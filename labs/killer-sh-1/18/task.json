@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "18",
   "title": "etcd key path, cert expiry, client-cert-auth в /opt/course/p1/etcd-info.txt",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 18,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

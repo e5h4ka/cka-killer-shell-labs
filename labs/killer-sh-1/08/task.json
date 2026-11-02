@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "08",
   "title": "Обновить старый worker до версии CP и kubeadm join",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 8,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

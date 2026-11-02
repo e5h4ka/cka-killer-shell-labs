@@ -1,1 +1,1 @@
-Подсказки этой задачи будут добавлены вместе с реализацией.
+Отдельный playground. Создай check-ip и первый Service, зафиксируй ./lab checkpoint --stage old-ip. Изучи https://kubernetes.io/docs/tasks/network/reconfigure-default-service-ip-ranges/. Нельзя считать простое добавление второго CIDR гарантией следующего IP из него. Изменения allocator/primary range могут нарушить API и DNS; автоматического rollback нет. После задачи пересоздай playground.

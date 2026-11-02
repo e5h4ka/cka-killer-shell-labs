@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "06",
   "title": "safari-pv/PVC 2Gi RWO, hostPath /Volumes/Data, safari httpd mount /tmp/safari-data",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 6,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

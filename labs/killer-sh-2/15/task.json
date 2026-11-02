@@ -3,7 +3,8 @@
   "suite": "killer-sh-2",
   "id": "15",
   "title": "Events sorted, удалить kube-proxy Pod, затем его container, два logs",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 15,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

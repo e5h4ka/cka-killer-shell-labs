@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "16",
   "title": "CoreDNS backup и custom-domain вместе с cluster.local",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 16,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

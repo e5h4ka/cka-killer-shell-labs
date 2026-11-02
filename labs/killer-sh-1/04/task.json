@@ -3,7 +3,8 @@
   "suite": "killer-sh-1",
   "id": "04",
   "title": "Имена BestEffort Pods в pods-terminated-first.txt",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 4,
-  "timeout_seconds": 120
+  "timeout_seconds": 120,
+  "cluster_tested": false
 }

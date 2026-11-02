@@ -10,6 +10,8 @@ COURSE = Path('/opt/course/1')
 
 
 def execute(action, task, state=None, course=None):
+    if action not in ('start', 'validate', 'cleanup'):
+        raise Blocked('This file-only lab has no checkpoints or recovery steps.')
     state = state or State()
     course = Path(course or COURSE)
     key = [task['suite'], task['id']]
