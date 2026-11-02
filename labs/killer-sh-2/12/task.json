@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-2",
+  "id": "12",
+  "title": "pod1/httpd, pod1-container только на CP, labels узлов не менять",
+  "status": "planned",
+  "source_question": 12,
+  "timeout_seconds": 120
+}

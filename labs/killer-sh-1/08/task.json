@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-1",
+  "id": "08",
+  "title": "Обновить старый worker до версии CP и kubeadm join",
+  "status": "planned",
+  "source_question": 8,
+  "timeout_seconds": 120
+}

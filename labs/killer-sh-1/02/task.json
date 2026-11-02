@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-1",
+  "id": "02",
+  "title": "cert-manager release и course-issuer с selfSigned.crlDistributionPoints",
+  "status": "planned",
+  "source_question": 2,
+  "timeout_seconds": 120
+}

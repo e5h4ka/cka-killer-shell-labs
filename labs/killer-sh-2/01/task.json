@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-2",
+  "id": "01",
+  "title": "control-config DNS_1–4 и controller rollout в lima-control",
+  "status": "planned",
+  "source_question": 1,
+  "timeout_seconds": 120
+}

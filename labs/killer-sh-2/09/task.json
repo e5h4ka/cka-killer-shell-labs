@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-2",
+  "id": "09",
+  "title": "Остановить scheduler, manual-schedule на CP, вернуть scheduler, manual-schedule2 на worker",
+  "status": "planned",
+  "source_question": 9,
+  "timeout_seconds": 120
+}

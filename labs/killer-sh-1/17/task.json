@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-1",
+  "id": "17",
+  "title": "tigers-reunite: container ID/runtimeType и logs",
+  "status": "planned",
+  "source_question": 17,
+  "timeout_seconds": 120
+}

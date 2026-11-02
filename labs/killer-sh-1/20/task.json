@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-1",
+  "id": "20",
+  "title": "Новый Service IP из 11.96.0.0/12",
+  "status": "planned",
+  "source_question": 20,
+  "timeout_seconds": 120
+}

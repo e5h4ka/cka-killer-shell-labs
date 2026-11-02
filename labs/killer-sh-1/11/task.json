@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "suite": "killer-sh-1",
+  "id": "11",
+  "title": "ds-important на всех узлах; labels id/uuid, requests 10m/10Mi",
+  "status": "planned",
+  "source_question": 11,
+  "timeout_seconds": 120
+}
