@@ -7,6 +7,27 @@ import sys
 from core import Blocked, State, catalog, identity, query, run
 
 
+def short_args(argv):
+    """Expand shorthand without changing the explicit command interface."""
+    argv = list(argv)
+    if not argv:
+        return ['list']
+    if argv[0].isdigit():
+        return ['start', 'killer-sh-1', argv[0], *argv[1:]]
+    if '/' in argv[0]:
+        parts = argv[0].split('/')
+        if len(parts) == 2 and parts[0] in ('1', '2') and parts[1].isdigit():
+            return ['start', 'killer-sh-' + parts[0], parts[1], *argv[1:]]
+    argv[0] = {'check': 'validate', 'clean': 'cleanup'}.get(argv[0], argv[0])
+    if argv[0] in ('validate', 'hint', 'cleanup') and (
+            len(argv) == 1 or argv[1].startswith('--')):
+        data = State().read()
+        if not data or data.get('phase') == 'cleaned':
+            raise Blocked('No active task. Start one: ./lab 1')
+        return [argv[0], *data['task'], *argv[1:]]
+    return argv
+
+
 def main(argv=None):
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8')
@@ -15,8 +36,8 @@ def main(argv=None):
     parser.add_argument('suite', nargs='?', choices=['killer-sh-1', 'killer-sh-2'])
     parser.add_argument('task', nargs='?')
     parser.add_argument('--level', type=int, choices=[1, 2, 3], default=1)
-    args = parser.parse_args(argv)
     try:
+        args = parser.parse_args(short_args(sys.argv[1:] if argv is None else argv))
         tasks = catalog()
         if args.action == 'list':
             for (suite, number), task in tasks.items():
