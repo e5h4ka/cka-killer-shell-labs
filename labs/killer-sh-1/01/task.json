@@ -3,7 +3,7 @@
   "suite": "killer-sh-1",
   "id": "01",
   "title": "Kubeconfig: contexts, current-context, decoded cert в /opt/course/1",
-  "status": "planned",
+  "status": "implemented",
   "source_question": 1,
   "timeout_seconds": 120
 }

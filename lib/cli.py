@@ -34,10 +34,14 @@ def main(argv=None):
             parser.error('Specify a registered suite and task number; use lab list.')
         task = tasks[key]
         if args.action == 'hint':
-            print((task['directory'] / 'hints.md').read_text(encoding='utf-8'))
+            hints = (task['directory'] / 'hints.md').read_text(encoding='utf-8').split('<!-- level -->')
+            print(hints[min(args.level, len(hints)) - 1].strip())
             return 0
         if task['status'] != 'implemented':
             raise Blocked(f'{key[0]}/{key[1]} implementation pending. See PLAN.md.')
+        if key == ('killer-sh-1', '01'):
+            from kubeconfig_lab import execute
+            return execute(args.action, task)
         raise Blocked('Lifecycle backend not yet installed.')
     except (Blocked, subprocess.TimeoutExpired, OSError) as exc:
         print('BLOCKED:', exc, file=sys.stderr)
